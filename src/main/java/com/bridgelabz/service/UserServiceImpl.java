@@ -41,6 +41,15 @@ public class UserServiceImpl implements UserService {
 	}
 	return ResponseEntity.notFound().build();   
     }
+	
+/*	@Override
+	public void updateActivation(Long id) {
+		Optional<User> maybeUser = repo.findById(id);
+		maybeUser.ifPresent(user -> {
+			repo.save(user);
+		});
+	}
+*/
 
 @Override
 public boolean deleteUser(long id) {
